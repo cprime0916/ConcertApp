@@ -1,0 +1,33 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow: auto;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+div {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 10px;
+}
