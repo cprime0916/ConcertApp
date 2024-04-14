@@ -1,0 +1,19 @@
+.main-frame {
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    width: 84%;
+    height: 75%;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+.main-in {
+    position: fixed;
+    top: 11.5%;
+    left: 15%;
+    width: 84%;
+    height: 72%;
+    z-index: 98;
+    overflow: auto;
+}
