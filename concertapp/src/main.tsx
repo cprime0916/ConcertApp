@@ -9,7 +9,7 @@ import './css/theme.css'
 import { BrowserRouter } from 'react-router-dom'
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/concertapp">
             <App />
         </BrowserRouter>
     </React.StrictMode>,

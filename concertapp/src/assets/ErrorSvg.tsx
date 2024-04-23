@@ -2,7 +2,7 @@ import React from "react";
 const ErrorSvg: React.FC = () => {
     return (
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-    width="500.000000pt" height="500.000000pt" viewBox="0 0 900.000000 900.000000"
+    width="400.000000pt" height="300.000000pt" viewBox="0 0 900.000000 500.000000"
     preserveAspectRatio="xMidYMid meet">
         <g transform="translate(300.000000,600.000000) scale(0.100000,-0.100000)"
     fill="#000000" stroke="none">
