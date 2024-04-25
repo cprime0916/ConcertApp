@@ -121,9 +121,9 @@
     font-size: 20px;
 }
 
-.error {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
