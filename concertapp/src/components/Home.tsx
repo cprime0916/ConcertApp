@@ -1,6 +1,7 @@
 import React from "react";
 import Playlist from "./Playlist";
 import ToggleTheme from "./Theme";
+import Playbar from "./Playbar";
 const Home: React.FC = () => {
     return (
         <div>
@@ -21,6 +22,9 @@ const Home: React.FC = () => {
                 <div className="main main-out-2">
                     <>{/* TODO: construct main stuff */}</>
                 </div>
+            </div>
+            <div className="2 bottom-div">
+                <Playbar AudioPath="test" />
             </div>
         </div>
 
