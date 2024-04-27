@@ -1,18 +1,26 @@
-﻿import React from "react";
+﻿import React, { useState } from "react";
 interface PlaybarProps {
     AudioPath: string;
 }
 
-const Playbar: React.FC<PlaybarProps> = ({ AudioPath }: { AudioPath: string }) => {
-    const TestFunc = () => {
-        alert(AudioPath)
+const PlayButton: React.FC = () => {
+    const [play, setPlay] = useState(false);
+    const playchar = (play ? "⏸" : "⏵");
+    const TogglePlay = () => {
+        setPlay(!play);
     };
     return (
+        <div className="2 play-button-out">
+            <button className="1 play-button" onClick={TogglePlay}>{playchar}</button>
+        </div>
+    );
+};
+
+const Playbar: React.FC<PlaybarProps> = ({ AudioPath }: { AudioPath: string }) => {
+    return (
         <>
-            <div className="2 play-button-out">
-                <button className="1 play-button" onClick={TestFunc}>⏵</button>
-            </div>
             <div className="1 play-bar">
+                <PlayButton />
                 <button className="1 play-bar-button-left" style={{ left: '42%', width: '4%', zIndex: '107', borderRadius: '40% 0 0 40%' }}>🔀</button>
                 { /* <button className="1 play-bar-button-left" style={{ left: '42%', width: '4%', zIndex: '107', borderRadius: '40% 0 0 40%' }}><img src="../assets/ShuffleIconDark.svg" style={{ width: '40px', height: '40px' }} className="img"></img></button> */}
                 <button className="1 play-bar-button-left" style={{ left: '45%', width: '3%', zIndex: '108', borderRadius: '50% 0 0 50%' }}>⏮</button>
