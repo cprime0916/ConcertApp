@@ -69,6 +69,8 @@
 }
 
 .play-button-out {
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 22%;
     height: 56%;
@@ -82,10 +84,12 @@
 .play-button {
     position: absolute;
     top: 2%;
-    height: 96%;
+    height: fit-content;
+    /*height: 96%;*/
     line-height: 96%;
     left: 2%;
-    width: 96%;
+    width: fit-content;
+    /*width: 96%;*/
     border-radius: 50%;
     font-size: 40px;
     z-index: 110;
