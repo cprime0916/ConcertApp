@@ -1,4 +1,4 @@
-{ /* import ErrorSvg from "../assets/ErrorSvg.svg"; */}
+{ /*import ErrorSvg from "../assets/Error.svg"; */ }
 const Error: React.FC = () => {
     return (
         <div className="container">
