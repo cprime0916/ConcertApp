@@ -41,6 +41,13 @@
 .anchor {
     color: blue;
     text-decoration: underline;
+    z-index: 113;
+}
+
+.error-text {
+    color: black;
+    text-decoration: underline;
+    z-index: 113;
 }
 
 .playlist {
