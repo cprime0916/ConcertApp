@@ -2,11 +2,13 @@ import React from "react";
 import Playlist from "./Playlist";
 import ToggleTheme from "./Theme";
 import Playbar from "./Playbar";
+import Setting from "./Setting";
 const Home: React.FC = () => {
     return (
         <div className="1">
             <div className="1 top-div">
                 <ToggleTheme />
+                <Setting />
                 <>{/* TODO: construct upper div */}</>
             </div>
             <div className="1 left-div-out">
