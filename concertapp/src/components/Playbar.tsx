@@ -1,6 +1,6 @@
 ﻿import React, { useState } from "react";
 interface PlaybarProps {
-    AudioPath: string;
+    AudioPath?: string;
 }
 
 const PlayButton: React.FC = () => {
@@ -16,7 +16,7 @@ const PlayButton: React.FC = () => {
     );
 };
 
-const Playbar: React.FC<PlaybarProps> = ({ AudioPath }: { AudioPath: string }) => {
+const Playbar: React.FC<PlaybarProps> = () => {
     return (
         <>
             <div className="1 play-bar">
