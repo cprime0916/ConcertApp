@@ -6,7 +6,7 @@ interface TribarProps {
     options?: string[];
 }
 const Tribar: React.FC<TribarProps> = () => {
-    const tribarRef = useRef(null);
+    const tribarRef = useRef<HTMLDivElement>(null);
     const [theme, setTheme] = useState(localStorage.getItem("theme"));
     const ToggleFunc = () => {
         if (tribarRef.current) {
@@ -23,7 +23,7 @@ const Tribar: React.FC<TribarProps> = () => {
         if (storedTheme) {
             setTheme(storedTheme); // Update state based on localStorage value
         }
-    }, [localStorage]);
+    }, [localStorage.getItem("theme")]);
     return (
         <>
             {theme === "dark" ? <SettingDSvg className="setting" onClick={ToggleFunc} /> : <SettingLSvg className="setting" onClick={ToggleFunc} /> }
