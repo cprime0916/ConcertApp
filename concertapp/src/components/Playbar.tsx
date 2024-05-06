@@ -1,21 +1,69 @@
 ﻿import React, { useState, SVGProps } from "react";
 import PlayButtonSVG from "../assets/PlayButton.svg";
+import PauseButtonSVG from "../assets/PauseButton.svg";
+import SkipBackwardButtonSVG from "../assets/SkipBackwardButton.svg";
+import SkipForwardButtonSVG from "../assets/SkipForwardButton.svg";
+import ShuffleButtonSVG from "../assets/ShuffleButton.svg";
+import LoopButtonSVG from "../assets/LoopButton.svg";
+
 interface PlaybarProps {
     AudioPath: string;
 }
 
+interface PlaybarButtonProps {
+    x_coord: number;
+    path: string;
+}
+
 const PlayButton: React.FC = () => {
     const [play, setPlay] = useState(false);
-    const playchar = (play ? "⏸" : "⏵");
     const TogglePlay = () => {
         setPlay(!play);
     };
+    const PlayButtonStyle: React.CSSProperties = {
+        left: `46%`,
+    };
     return (
-        <div className="2 play-button-out">
-            {/* <button className="1 play-button" onClick={TogglePlay}>{playchar}</button> */}
-            <button className="1 play-button" onClick={TogglePlay}>
-                <PlayButtonSVG />
-            </button>
+        <div style={PlayButtonStyle} className="2 play-button-out">
+            {play ? <PauseButtonSVG onClick={TogglePlay}/> : <PlayButtonSVG onClick={TogglePlay}/>}
+        </div>
+    );
+};
+
+const PlaybarButton: React.FC<PlaybarButtonProps> = ({ x_coord, path }) => {
+    const ReturnIconAlias = (IconName: string) => {
+        if (IconName == "SkipBackward") return SkipBackwardButtonSVG;
+        else if (IconName == "SkipForward") return SkipForwardButtonSVG;
+        else if (IconName == "Shuffle") return ShuffleButtonSVG;
+        else if (IconName == "Loop") return LoopButtonSVG;
+    };
+    
+    const ReturnFunctionAlias = (IconName: string) => {
+        if (IconName == "SkipBackward") return SkipBack;
+        else if (IconName == "SkipForward") return SkipFront;
+        else if (IconName == "Shuffle") return Shuffle;
+        else if (IconName == "Loop") return Loop;
+    };
+    const SkipBack = () => {
+        return;
+    };
+    const SkipFront = () => {
+        return;
+    };
+    const Shuffle = () => {
+        return;
+    };
+    const Loop = () => {
+        return;
+    };
+    const SVGComponent = ReturnIconAlias(path);
+    const SVGFunction = ReturnFunctionAlias(path);
+    const PlaybarButtonStyle: React.CSSProperties = {
+        left: `${x_coord}%`,
+    };
+    return (
+        <div style={PlaybarButtonStyle} className="2 play-button-out">
+            {SVGComponent && <SVGComponent className="inverse playbar-button-svg" onClick={SVGFunction}/>}
         </div>
     );
 };
@@ -25,13 +73,10 @@ const Playbar: React.FC<PlaybarProps> = ({ AudioPath }: { AudioPath: string }) =
         <>
             <div className="2 bottom-div">
                 <PlayButton />
-                <div className="1 play-bar">
-                    <button className="1 play-bar-button-left" style={{ left: '42%', width: '4%', zIndex: '107', borderRadius: '40% 0 0 40%' }}>🔀</button>
-                    { /* <button className="1 play-bar-button-left" style={{ left: '42%', width: '4%', zIndex: '107', borderRadius: '40% 0 0 40%' }}><img src="../assets/ShuffleIconDark.svg" style={{ width: '40px', height: '40px' }} className="img"></img></button> */}
-                    <button className="1 play-bar-button-left" style={{ left: '45%', width: '3%', zIndex: '108', borderRadius: '50% 0 0 50%' }}>⏮</button>
-                    <button className="1 play-bar-button-right" style={{ left: '52%', width: '3%', zIndex: '108', borderRadius: '0 50% 50% 0' }}>⏭</button>
-                    <button className="1 play-bar-button-right" style={{ left: '54%', width: '4%', zIndex: '107', borderRadius: '0 40% 40% 0' }}>⏭</button>
-                </div>
+                <PlaybarButton x_coord={38} path="SkipBackward" />
+                <PlaybarButton x_coord={54} path="SkipForward" />
+                <PlaybarButton x_coord={30} path="Shuffle" />
+                <PlaybarButton x_coord={62} path="Loop" />
             </div>
         </>
     );

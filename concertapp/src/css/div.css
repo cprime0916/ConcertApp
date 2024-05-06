@@ -70,7 +70,6 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
     top: 87%;
     left: 15%;
     width: 84%;
@@ -82,58 +81,45 @@
 .play-button-out {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
-    left: 47.5%;
-    width: 5%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    z-index: 111;
+    overflow: hidden;
+    border: none;
+    width: 8%;
+    height: 100%;
+    font-size: 45px;
 }
 
-.play-button {
+.play-button-svg {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     overflow: hidden;
     border: none;
-    left: 1%;
-    width: 98%;
-    height: 0;
-    padding-top: 98%;
-    border-radius: 50%;
-    font-size: 45px;
-    z-index: 110;
+    top: 25%;
+    height: 50%;
+    line-height: 50%;
+    aspect-ratio: 1/1;
+    z-index: 108;
+    fill: #0000b0;
+}
+.play-button-svg:hover {
+    fill: #0000f0;
 }
 
-.play-bar {
+.playbar-button-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 35%;
-    height: 30%;
-    line-height: 30%;
-    left: 10%;
-    width: 80%;
-    border-radius: 15px;
-    font-size: 25px;
-    z-index: 109;
-}
-
-.play-bar-button-left {
-    position: absolute;
-    text-align: center;
-    top: 0%;
-    height: 100%;
-    line-height: 0%;
-    font-size: 20px;
-}
-
-.play-bar-button-right {
-    position: absolute;
-    text-align: center;
-    top: 0%;
-    height: 100%;
-    line-height: 0%;
-    font-size: 20px;
+    overflow: hidden;
+    border: none;
+    top: 25%;
+    height: 50%;
+    line-height: 50%;
+    aspect-ratio: 1/1;
+    z-index: 108;
 }
 
 .container {

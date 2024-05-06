@@ -56,19 +56,15 @@
 
 
 .light-inverse {
-    color: #D6E1E8;
-    background-color: #818C98;
+    fill: #0E1525;
+    background-color: #D6E1E8;
 }
-.light-inverse button {
-    border: 2px solid #818C98;
-}
-.light-inverse button:hover {
-    background-color: #737C87;
+.light-inverse:hover {
+    fill: #737C87;
 }
 .light-inverse.playlist:hover {
     background-color: #737C87;
 }
-
 
 
 .dark-main {
@@ -128,14 +124,10 @@
 }
 
 .dark-inverse {
-    color: #14151C;
-    background-color: #9BA1B0;
+    fill: #818C98;
 }
-.dark-inverse button {
-    border: 2px solid #9BA1B0;
-}
-.dark-inverse button:hover {
-    background-color: #737C87;
+.dark-inverse:hover {
+    fill: #737C87;
 }
 .dark-inverse.playlist:hover {
     background-color: #737C87;
