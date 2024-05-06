@@ -4,7 +4,7 @@ import ToggleTheme from "./Theme";
 import Playbar from "./Playbar";
 const Home: React.FC = () => {
     return (
-        <div className="1">
+        <div>
             <div className="1 top-div">
                 <ToggleTheme />
                 <>{/* TODO: construct upper div */}</>
@@ -16,16 +16,12 @@ const Home: React.FC = () => {
                     <Playlist title="Bar" path="bar" />
                 </div>
             </div>
-            <div className="1">
-                <div className="main main-frame">
-                    <div className="main main-in">
-                        {/* Main Contents */}
-                    </div>
+            <div className="main main-frame">
+                <div className="main main-in">
+                    {/* Main Contents */}
                 </div>
             </div>
-            <div className="2 bottom-div">
-                <Playbar AudioPath="test" />
-            </div>
+            <Playbar AudioPath="test" />
         </div>
 
     );

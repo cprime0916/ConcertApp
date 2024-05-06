@@ -68,6 +68,9 @@
 
 .bottom-div {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 87%;
     left: 15%;
     width: 84%;
@@ -80,22 +83,24 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: -50%;
-    height: 200%;
-    line-height: 56%;
     left: 47.5%;
     width: 5%;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     z-index: 111;
 }
 
 .play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 2%;
-    height: 96%;
-    line-height: 96%;
-    left: 2%;
-    width: 96%;
+    overflow: hidden;
+    border: none;
+    left: 1%;
+    width: 98%;
+    height: 0;
+    padding-top: 98%;
     border-radius: 50%;
     font-size: 45px;
     z-index: 110;
