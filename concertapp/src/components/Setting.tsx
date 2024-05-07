@@ -1,36 +1,46 @@
-import React, { useRef, useState, useEffect } from "react";
-import SettingDSvg from "../assets/SettingDark.svg";
-import SettingLSvg from "../assets/SettingLight.svg";
-{ /* This is just a temporary approach to the setting components (especially options), each option top px = prev option + 15. */ }
+import React, { useRef } from "react";
+import TribarSVG from "../assets/Tribar.svg";
+{ /* each option top px = prev option + 15. */ }
+interface OptionProps {
+    text: string;
+    optionRef: React.RefObject<HTMLDivElement>;
+    useFunc?: () => void;
+}
+const optionToggleFunc = (optionRef: React.RefObject<HTMLDivElement>) => {
+    if (optionRef.current) {
+        const optionDiv = optionRef.current;
+        if (optionDiv.style.display === "none") {
+            optionDiv.style.display = "block";
+        } else {
+            optionDiv.style.display = "none";
+        }
+    }
+};
+const Option: React.FC<OptionProps> = ({ text, optionRef }: { text: string, optionRef: React.RefObject<HTMLDivElement> }) => {
+    return (
+        <>
+            <div ref={optionRef} style={{ display: "none" as const }} className="2 options">
+                {text}
+            </div>
+        </>
+    )
+};
 interface TribarProps {
     options?: string[];
 }
 const Tribar: React.FC<TribarProps> = () => {
     const tribarRef = useRef<HTMLDivElement>(null);
-    const [theme, setTheme] = useState(localStorage.getItem("theme"));
+    const goodbyeWorldRef = useRef<HTMLDivElement>(null);
     const ToggleFunc = () => {
-        if (tribarRef.current) {
-            const TribarDiv = tribarRef.current;
-            if (TribarDiv.style.display === "none") {
-                TribarDiv.style.display = "block";
-            } else {
-                TribarDiv.style.display = "none";
-            }
-        }
+        optionToggleFunc(tribarRef);
+        optionToggleFunc(goodbyeWorldRef);
+        { /* TODO: Add all ur Option component functions here */ }
     };
-    useEffect(() => {
-        const storedTheme = localStorage.getItem("theme");
-        if (storedTheme) {
-            setTheme(storedTheme); // Update state based on localStorage value
-        }
-    }, [localStorage.getItem("theme")]);
     return (
         <>
-            {theme === "dark" ? <SettingDSvg className="setting" onClick={ToggleFunc} /> : <SettingLSvg className="setting" onClick={ToggleFunc} /> }
-            <div ref={tribarRef} style={{ display: "none" as const }} className="2 options">
-                Hello, World!
-            </div>
-
+            <TribarSVG className="inverse setting" onClick={ToggleFunc} />
+            <Option text="Hello, World!" optionRef={tribarRef} />
+            <Option text="Goodbye, World!" optionRef={goodbyeWorldRef} />
             {/* TODO: construct tribar component (base component of Setting */}
         </>
     );
@@ -43,5 +53,4 @@ const Setting: React.FC = () => {
         </>
     );
 };
-{/* className="inverse" */ }
 export default Setting;
