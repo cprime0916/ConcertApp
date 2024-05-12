@@ -26,6 +26,11 @@ div {
 }
 
 
+ul{
+    list-style: none;
+    padding: 0;
+}
+
 ::-webkit-scrollbar-thumb {
     width: 2px;
     border-radius: 10px;

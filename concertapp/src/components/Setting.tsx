@@ -19,7 +19,7 @@ const optionToggleFunc = (optionRef: React.RefObject<HTMLDivElement>) => {
 const Option: React.FC<OptionProps> = ({ text, optionRef }: { text: string, optionRef: React.RefObject<HTMLDivElement> }) => {
     return (
         <>
-            <div ref={optionRef} style={{ display: "none" as const }} className="2 options">
+            <div ref={optionRef} style={{ display: "none" as const }}>
                 {text}
             </div>
         </>
@@ -39,8 +39,10 @@ const Tribar: React.FC<TribarProps> = () => {
     return (
         <>
             <TribarSVG className="inverse setting" onClick={ToggleFunc} />
-            <Option text="Hello, World!" optionRef={tribarRef} />
-            <Option text="Goodbye, World!" optionRef={goodbyeWorldRef} />
+            <ul className="2 options">
+                <li><Option text="Hello, World!" optionRef={tribarRef} /></li>
+                <li><Option text="Goodbye, World!" optionRef={goodbyeWorldRef} /></li>
+            </ul>
             {/* TODO: construct tribar component (base component of Setting */}
         </>
     );
