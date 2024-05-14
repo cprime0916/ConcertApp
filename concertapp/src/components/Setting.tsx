@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import TribarSVG from "../assets/Tribar.svg";
 { /* each option top px = prev option + 15. */ }
 interface OptionProps {
@@ -18,21 +19,21 @@ const optionToggleFunc = (optionRef: React.RefObject<HTMLDivElement>) => {
 };
 const Option: React.FC<OptionProps> = ({ text, optionRef }: { text: string, optionRef: React.RefObject<HTMLDivElement> }) => {
     return (
-        <>
+        <Link to="/settings">
             <div ref={optionRef} style={{ display: "none" as const }}>
                 {text}
             </div>
-        </>
+        </Link>
     )
 };
 interface TribarProps {
     options?: string[];
 }
 const Tribar: React.FC<TribarProps> = () => {
-    const tribarRef = useRef<HTMLDivElement>(null);
+    const helloWorldRef = useRef<HTMLDivElement>(null);
     const goodbyeWorldRef = useRef<HTMLDivElement>(null);
     const ToggleFunc = () => {
-        optionToggleFunc(tribarRef);
+        optionToggleFunc(helloWorldRef);
         optionToggleFunc(goodbyeWorldRef);
         { /* TODO: Add all ur Option component functions here */ }
     };
@@ -40,7 +41,8 @@ const Tribar: React.FC<TribarProps> = () => {
         <>
             <TribarSVG className="inverse setting" onClick={ToggleFunc} />
             <ul className="2 options">
-                <li><Option text="Hello, World!" optionRef={tribarRef} /></li>
+		{/* placeholders for elements in Tribar component  */}
+                <li><Option text="Hello, World!" optionRef={helloWorldRef} /></li>
                 <li><Option text="Goodbye, World!" optionRef={goodbyeWorldRef} /></li>
             </ul>
             {/* TODO: construct tribar component (base component of Setting */}
