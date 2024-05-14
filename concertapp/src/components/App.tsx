@@ -8,8 +8,7 @@ const App: React.FC = () => {
         <>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/playlist/foo" element={<PlaylistPage title="Foo" />} />
-                <Route path="/playlist/bar" element={<PlaylistPage title="Bar" />} />
+                <Route path="/playlist/:playlistName" element={<PlaylistPage/>} />
                 <Route path="*" element={<Error />} />
             </Routes>
         </>

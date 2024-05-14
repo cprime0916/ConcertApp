@@ -1,11 +1,12 @@
 import React from "react";
-interface PlaylistProps{
-    title: string;
-}
-const PlaylistPage: React.FC<PlaylistProps> = ({title}: {title: string}) => {
+import { useParams } from "react-router-dom";
+import TSLogo from "../assets/TSLogo.svg";
+const PlaylistPage: React.FC = () => {
+    const { playlistName } = useParams();
     return (
         <div>
-            <h1>{title}</h1>
+            <TSLogo />
+            <h1>{playlistName}</h1>
         </div>
     )
 };

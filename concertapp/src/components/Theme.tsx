@@ -52,7 +52,7 @@ const ToggleTheme = () => {
         SwitchTheme("inverse");
         setIsDarkMode(prevIsDarkMode => {
             const newIsDarkMode = !prevIsDarkMode;
-            localStorage.setItem('theme', newIsDarkMode ? 'dark' : 'light');
+            localStorage.setItem("theme", newIsDarkMode ? "dark" : "light");
             return newIsDarkMode;
         });
     }
