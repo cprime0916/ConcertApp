@@ -1,4 +1,12 @@
 declare module "*.svg" {
-    const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-    export default content;
-  }
+  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  export default content;
+}
+declare module "*.mp3" {
+  const src: string;
+  export default src;
+}
+declare module "*.mp4" {
+  const src: string;
+  export default src;
+}
