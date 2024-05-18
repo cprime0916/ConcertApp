@@ -72,15 +72,18 @@
     fill: #0E1525;
     background-color: #D6E1E8;
 }
+.light-inverse:hover {
+    fill: #737C87;
+}
+.light-inverse.playlist:hover {
+    background-color: #737C87;
+}
 
-    .light-inverse:hover {
-        fill: #737C87;
-    }
-
-    .light-inverse.playlist:hover {
-        background-color: #737C87;
-    }
-
+.dark-progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid #0E1525;
+    background: #D6E1E8;
+}
 
 .dark-main {
     color: #818C98;
@@ -154,11 +157,15 @@
 .dark-inverse {
     fill: #818C98;
 }
+.dark-inverse:hover {
+    fill: #737C87;
+}
+.dark-inverse.playlist:hover {
+    background-color: #737C87;
+}
 
-    .dark-inverse:hover {
-        fill: #737C87;
-    }
-
-    .dark-inverse.playlist:hover {
-        background-color: #737C87;
-    }
+.dark-progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid #818C98;
+    background: #1F212B;
+}

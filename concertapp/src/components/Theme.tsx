@@ -8,7 +8,7 @@ const ToggleComponent: React.FC<ToggleComponentProps> = ({ toggleFunc }) => {
     return (
         <div>
             <label className="switch">
-                <input type="checkbox" id="ld-mode" defaultChecked={true} />
+                <input type="checkbox" id="ld-mode" defaultChecked={true} aria-label="Theme Switch"/>
                 <span className="slider round" onClick={toggleFunc} />
             </label>
         </div>
@@ -50,6 +50,7 @@ const ToggleTheme = () => {
         SwitchTheme("1");
         SwitchTheme("2");
         SwitchTheme("inverse");
+        SwitchTheme("progress-bar");
         setIsDarkMode(prevIsDarkMode => {
             const newIsDarkMode = !prevIsDarkMode;
             localStorage.setItem("theme", newIsDarkMode ? "dark" : "light");
@@ -65,6 +66,7 @@ const ToggleTheme = () => {
         initClass("1");
         initClass("2");
         initClass("inverse");
+        initClass("progress-bar");
     }
 
     const ToggleFunc = () => {
