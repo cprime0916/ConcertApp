@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import TribarSVG from "../assets/Tribar.svg";
-{ /* each option top px = prev option + 15. */ }
 interface OptionProps {
     text: string;
     optionRef: React.RefObject<HTMLDivElement>;
@@ -19,7 +18,7 @@ const optionToggleFunc = (optionRef: React.RefObject<HTMLDivElement>) => {
 };
 const Option: React.FC<OptionProps> = ({ text, optionRef }: { text: string, optionRef: React.RefObject<HTMLDivElement> }) => {
     return (
-        <Link to="/settings">
+        <Link to="/settings" className="1" style={{ textDecoration: "none" }}>
             <div ref={optionRef} style={{ display: "none" as const }}>
                 {text}
             </div>
