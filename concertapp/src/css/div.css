@@ -129,6 +129,12 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
+.x-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .setting {
     position: absolute;
     left: 0;

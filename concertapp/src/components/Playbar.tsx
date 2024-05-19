@@ -12,7 +12,7 @@ import TestAudio3 from "../assets/TestAudio3.mp3";
 const AudioArray = [TestAudio, TestAudio2, TestAudio3];
 
 interface PlaybarProps {
-    AudioPath: string;
+    AudioPath?: string;
 }
 
 interface PlaybarButtonProps {
@@ -196,7 +196,7 @@ const PlaybarButton: React.FC<PlaybarButtonProps> = ({ x_coord, path, onClick })
     );
 };
 
-const Playbar: React.FC<PlaybarProps> = ({ AudioPath }: { AudioPath: string }) => {
+const Playbar: React.FC<PlaybarProps> = () => {
     const audioRef = useRef(new Audio());
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loop, setLoop] = useState(false);
@@ -228,7 +228,7 @@ const Playbar: React.FC<PlaybarProps> = ({ AudioPath }: { AudioPath: string }) =
     };
     
     const Shuffle = () => {
-        let randomIndex = Math.floor(Math.random() * AudioArray.length);
+        const randomIndex = Math.floor(Math.random() * AudioArray.length);
         setCurrentIndex(randomIndex);
         setLoop(false); // disable loop mode
         if (audioRef.current) {
