@@ -145,3 +145,10 @@
     left: 50px;
     margin-top: 15px;
 }
+
+.setdiv{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    z-index: 110;
+}

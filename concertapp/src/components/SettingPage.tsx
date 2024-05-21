@@ -6,7 +6,8 @@ const SettingPage: React.FC = () => {
             <div className="x-container">
                 <h1>Settings</h1>
             </div>
-            <div className="container">
+            <div className="main container setdiv">
+                sup niggas
                 {/* TODO: Add elem/component for showing settings options */}
             </div>
         </>
