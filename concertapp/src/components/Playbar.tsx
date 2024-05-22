@@ -1,10 +1,10 @@
 ﻿import React, { useState, useEffect, useRef } from "react";
-import PlayButtonSVG from "../assets/PlayButton.svg";
-import PauseButtonSVG from "../assets/PauseButton.svg";
-import SkipBackwardButtonSVG from "../assets/SkipBackwardButton.svg";
-import SkipForwardButtonSVG from "../assets/SkipForwardButton.svg";
-import ShuffleButtonSVG from "../assets/ShuffleButton.svg";
-import LoopButtonSVG from "../assets/LoopButton.svg";
+import PlayButtonSVG from "../assets/playbar/PlayButton.svg";
+import PauseButtonSVG from "../assets/playbar/PauseButton.svg";
+import SkipBackwardButtonSVG from "../assets/playbar/SkipBackwardButton.svg";
+import SkipForwardButtonSVG from "../assets/playbar/SkipForwardButton.svg";
+import ShuffleButtonSVG from "../assets/playbar/ShuffleButton.svg";
+import LoopButtonSVG from "../assets/playbar/LoopButton.svg";
 import TestAudio from "../assets/TestAudio.mp3";
 import TestAudio2 from "../assets/TestAudio2.mp3";
 import TestAudio3 from "../assets/TestAudio3.mp3";
