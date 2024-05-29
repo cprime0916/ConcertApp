@@ -13,4 +13,4 @@ const SettingPage: React.FC = () => {
         </>
     );
 };
-export default SettingPage
+export default SettingPage;

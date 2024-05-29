@@ -68,22 +68,25 @@ const ProgressBar: React.FC<{ audioRef: React.RefObject<HTMLAudioElement> }> = (
     const ProgressContainerStyle: React.CSSProperties = {
         display: 'flex',
         alignItems: 'center',
+        left: '10%',
+        width: '80%',
     };
 
     const TimeStyle: React.CSSProperties = {
         fontSize: '20px',
-    }
+    };
 
     const ProgressBarStyle: React.CSSProperties = {
         position: 'absolute',
-        left: '10%',
-        width: '20%',
+        left: '15%',
+        width: '70%',
     };
 
     return (
-        <div style={ProgressBarStyle} className="2 play-button-out">
+        <div className="2 progress-bar-out">
+            <div style={TimeStyle}>{formatTime(currentTime)}</div>
             <div style={ProgressContainerStyle}>
-                <input
+                <input style={ProgressBarStyle}
                     type="range"
                     value={currentTime}
                     step="1"
@@ -94,7 +97,7 @@ const ProgressBar: React.FC<{ audioRef: React.RefObject<HTMLAudioElement> }> = (
                     aria-label="Audio Progress Bar"
                 />
             </div>
-            <div style={TimeStyle}>{formatTime(currentTime)} / {formatTime(duration)}</div>
+            <div style={TimeStyle}>{formatTime(duration)}</div>
         </div>
     );
 };
