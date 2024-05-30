@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import TSLogo from "../assets/TSLogo.svg";
 import Error from "./Error";
+import init from "./Theme";
 const namesArray = ["Foo", "Bar"];
 const playlistNameFmt = (s: string) => {
     s = s[0].toUpperCase() + s.slice(1);
@@ -13,6 +14,7 @@ const playlistNameFmt = (s: string) => {
     return s;
 };
 const PlaylistPage: React.FC = () => {
+    init();
     const { playlistName } = useParams();
     const refmtName = playlistNameFmt(playlistName!);
     if (!namesArray.includes(refmtName)) {

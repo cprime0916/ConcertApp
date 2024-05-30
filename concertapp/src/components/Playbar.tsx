@@ -1,4 +1,5 @@
 ﻿import React, { useState, useEffect, useRef } from "react";
+import SettingPage from "./SettingPage.tsx";
 import PlayButtonSVG from "../assets/PlayButton.svg";
 import PauseButtonSVG from "../assets/PauseButton.svg";
 import SkipBackwardButtonSVG from "../assets/SkipBackwardButton.svg";
@@ -104,6 +105,9 @@ const ProgressBar: React.FC<{ audioRef: React.RefObject<HTMLAudioElement> }> = (
 
 const PlayButton: React.FC<{ audioRef: React.RefObject<HTMLAudioElement>, src: string, loop: boolean, handleAudioEnd: () => void }> = ({ audioRef, src, loop, handleAudioEnd }) => {
     const [play, setPlay] = useState(false);
+    // if (audioRef.current) {
+    //     audioRef.current.volume = volume; // Set volume based on your variable
+    // }
 
     useEffect(() => {
         if (audioRef.current) {

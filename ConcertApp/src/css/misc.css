@@ -1,0 +1,30 @@
+/* Center Div */
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.x-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Error Page */
+
+.anchor {
+    color: blue;
+    text-decoration: underline;
+    z-index: 113;
+}
+
+.error-text {
+    color: black;
+    text-decoration: underline;
+    z-index: 113;
+}
+
+/* efgefgefg */

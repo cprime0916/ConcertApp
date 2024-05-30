@@ -3,33 +3,33 @@
     background-color: #E8F5FC;
 }
 
-    .light-main button {
-        border: 2px solid #E8F5FC;
-    }
+.light-main button {
+    border: 2px solid #E8F5FC;
+}
 
-        .light-main button:hover {
-            background-color: #D1DCE3;
-        }
+.light-main button:hover {
+    background-color: #D1DCE3;
+}
 
-    .light-main.playlist:hover {
-        background-color: #D1DCE3;
-    }
+.light-main.playlist:hover {
+    background-color: #D1DCE3;
+ }
 
-    .light-main::-webkit-scrollbar {
-        background-color: #E8F5FC;
-    }
+.light-main::-webkit-scrollbar {
+    background-color: #E8F5FC;
+}
 
-    .light-main::-webkit-scrollbar-track {
-        background-color: #E8F5FC;
-    }
+.light-main::-webkit-scrollbar-track {
+     background-color: #E8F5FC;
+}
 
-    .light-main::-webkit-scrollbar-thumb {
-        background-color: #818C98;
-    }
+.light-main::-webkit-scrollbar-thumb {
+    background-color: #818C98;
+}
 
-        .light-main::-webkit-scrollbar-thumb:hover {
-            background-color: #737C87;
-        }
+.light-main::-webkit-scrollbar-thumb:hover {
+    background-color: #737C87;
+}
 
 
 .light-1 {
@@ -37,17 +37,17 @@
     background-color: #DDE9F0;
 }
 
-    .light-1 button {
-        border: 2px solid #DDE9F0;
-    }
+.light-1 button {
+    border: 2px solid #DDE9F0;
+}
 
-        .light-1 button:hover {
-            background-color: #D1DCE3;
-        }
+.light-1 button:hover {
+    background-color: #D1DCE3;
+}
 
-    .light-1.playlist:hover {
-        background-color: #D1DCE3;
-    }
+.light-1.playlist:hover {
+    background-color: #D1DCE3;
+}
 
 
 .light-2 {
@@ -55,22 +55,22 @@
     background-color: #D6E1E8;
 }
 
-    .light-2 button {
-        border: 2px solid #D6E1E8;
-    }
+.light-2 button {
+    border: 2px solid #D6E1E8;
+}
 
-        .light-2 button:hover {
-            background-color: #D1DCE3;
-        }
+.light-2 button:hover {
+    background-color: #D1DCE3;
+}
 
-    .light-2.playlist:hover {
-        background-color: #D1DCE3;
-    }
+.light-2.playlist:hover {
+    background-color: #D1DCE3;
+}
 
 
 .light-inverse {
     fill: #0E1525;
-    background-color: #D6E1E8;
+    background-color: #DDE9F0;
 }
 .light-inverse:hover {
     fill: #737C87;
@@ -90,33 +90,33 @@
     background-color: #0A0B10;
 }
 
-    .dark-main button {
-        border: 2px solid #0A0B10;
-    }
+.dark-main button {
+    border: 2px solid #0A0B10;
+}
 
-        .dark-main button:hover {
-            background-color: #2C3040;
-        }
+.dark-main button:hover {
+    background-color: #2C3040;
+}
 
-    .dark-main.playlist:hover {
-        background-color: #2C3040;
-    }
+.dark-main.playlist:hover {
+    background-color: #2C3040;
+}
 
-    .dark-main::-webkit-scrollbar {
-        background-color: #0A0B10;
-    }
+.dark-main::-webkit-scrollbar {
+    background-color: #0A0B10;
+}
 
-    .dark-main::-webkit-scrollbar-track {
-        background-color: #0A0B10;
-    }
+.dark-main::-webkit-scrollbar-track {
+    background-color: #0A0B10;
+}
 
-    .dark-main::-webkit-scrollbar-thumb {
-        background-color: #818C98;
-    }
+.dark-main::-webkit-scrollbar-thumb {
+    background-color: #818C98;
+}
 
-        .dark-main::-webkit-scrollbar-thumb:hover {
-            background-color: #737C87;
-        }
+.dark-main::-webkit-scrollbar-thumb:hover {
+    background-color: #737C87;
+}
 
 
 .dark-1 {
@@ -124,17 +124,17 @@
     background-color: #14151C;
 }
 
-    .dark-1 button {
-        border: 2px solid #14151C;
-    }
+.dark-1 button {
+    border: 2px solid #14151C;
+}
 
-        .dark-1 button:hover {
-            background-color: #2C3040;
-        }
+.dark-1 button:hover {
+    background-color: #2C3040;
+}
 
-    .dark-1.playlist:hover {
-        background-color: #2C3040;
-    }
+.dark-1.playlist:hover {
+    background-color: #2C3040;
+}
 
 
 .dark-2 {
@@ -142,17 +142,17 @@
     background-color: #1F212B;
 }
 
-    .dark-2 button {
-        border: 2px solid #1F212B;
-    }
+.dark-2 button {
+    border: 2px solid #1F212B;
+}
 
-        .dark-2 button:hover {
-            background-color: #2C3040;
-        }
+.dark-2 button:hover {
+    background-color: #2C3040;
+}
 
-    .dark-2.playlist:hover {
-        background-color: #2C3040;
-    }
+.dark-2.playlist:hover {
+    background-color: #2C3040;
+}
 
 .dark-inverse {
     fill: #818C98;
