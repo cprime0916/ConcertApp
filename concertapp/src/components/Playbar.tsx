@@ -5,11 +5,11 @@ import SkipBackwardButtonSVG from "../assets/playbar/SkipBackwardButton.svg";
 import SkipForwardButtonSVG from "../assets/playbar/SkipForwardButton.svg";
 import ShuffleButtonSVG from "../assets/playbar/ShuffleButton.svg";
 import LoopButtonSVG from "../assets/playbar/LoopButton.svg";
-import TestAudio from "../assets/TestAudio.mp3";
-import TestAudio2 from "../assets/TestAudio2.mp3";
-import TestAudio3 from "../assets/TestAudio3.mp3";
-
-const AudioArray = [TestAudio, TestAudio2, TestAudio3];
+import TestAudio from "../assets/music/TestAudio.mp3";
+import TestAudio2 from "../assets/music/TestAudio2.mp3";
+import TestAudio3 from "../assets/music/TestAudio3.mp3";
+import Foobar from "../assets/music/Foobar.mp3";
+const AudioArray = [TestAudio, TestAudio2, TestAudio3, Foobar];
 
 interface PlaybarProps {
     AudioPath?: string;
