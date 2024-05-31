@@ -29,11 +29,11 @@ interface TribarProps {
     options?: string[];
 }
 const Tribar: React.FC<TribarProps> = () => {
-    const helloWorldRef = useRef<HTMLDivElement>(null);
-    const goodbyeWorldRef = useRef<HTMLDivElement>(null);
+    const generalRef = useRef<HTMLDivElement>(null);
+    const themeRef = useRef<HTMLDivElement>(null);
     const ToggleFunc = () => {
-        optionToggleFunc(helloWorldRef);
-        optionToggleFunc(goodbyeWorldRef);
+        optionToggleFunc(generalRef);
+        optionToggleFunc(themeRef);
         { /* TODO: Add all ur Option component functions here */ }
     };
     return (
@@ -41,8 +41,8 @@ const Tribar: React.FC<TribarProps> = () => {
             <TribarSVG className="inverse setting" onClick={ToggleFunc} />
             <ul className="2 options">
 		{/* placeholders for elements in Tribar component  */}
-                <li><Option text="Hello, World!" optionRef={helloWorldRef} /></li>
-                <li><Option text="Goodbye, World!" optionRef={goodbyeWorldRef} /></li>
+                <li><Option text="General" optionRef={generalRef} /></li>
+                <li><Option text="Theme" optionRef={themeRef} /></li>
             </ul>
             {/* TODO: construct tribar component (base component of Setting */}
         </>

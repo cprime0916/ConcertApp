@@ -105,9 +105,9 @@ const ProgressBar: React.FC<{ audioRef: React.RefObject<HTMLAudioElement> }> = (
 
 const PlayButton: React.FC<{ audioRef: React.RefObject<HTMLAudioElement>, src: string, loop: boolean, handleAudioEnd: () => void }> = ({ audioRef, src, loop, handleAudioEnd }) => {
     const [play, setPlay] = useState(false);
-    // if (audioRef.current) {
-    //     audioRef.current.volume = volume; // Set volume based on your variable
-    // }
+     if (audioRef.current) {
+         audioRef.current.volume = parseInt(localStorage.getItem("volume"))/100; // Set volume based on your variable
+     }
 
     useEffect(() => {
         if (audioRef.current) {
